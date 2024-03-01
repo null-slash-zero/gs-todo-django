@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
+    'apps.todo',
 ]
 
 MIDDLEWARE = [
@@ -78,13 +79,14 @@ WSGI_APPLICATION = 'gs_todo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+POSTGRES_HOST = os.environ.get('POSTGRES_HOST', 'localhost')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('POSTGRES_DB'),
-        'USER': os.environ.get('POSTGRES_USER'),
-        'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
-        'HOST': 'localhost',
+        'NAME': 'gs_todo',
+        'USER': 'gs_todo_user',
+        'HOST': f'{POSTGRES_HOST}',
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
         'PORT': 5432
     }
 }
