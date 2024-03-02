@@ -2,12 +2,12 @@ from rest_framework import serializers
 
 from apps.todo.models import TodoList, TodoItem
 
-class TodoListSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = TodoList
-        fields = '__all__'
-
 class TodoItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = TodoItem
-        fields = '__all__'
+        fields = ('description', 'completed')
+class TodoListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TodoList
+        fields = ('name', 'description')
+
