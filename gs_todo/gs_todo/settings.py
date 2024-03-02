@@ -90,7 +90,6 @@ DATABASES = {
         'NAME': 'gs_todo',
         'USER': 'gs_todo_user',
         'HOST': f'{POSTGRES_HOST}',
-        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
         'PORT': 5432
     }
 }
