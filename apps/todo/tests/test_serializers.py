@@ -27,7 +27,7 @@ class TodoListSerializerTestCase(TestCase):
         serializer = TodoListSerializer(self.todo_list)
         data = serializer.data
 
-        assert set(data.keys()) == set(['name', 'description', 'created_at', 'updated_at'])
+        assert set(data.keys()) == set(['id', 'name', 'description', 'created_at', 'updated_at'])
 
     def test_serializer_data(self):
         serializer = TodoListSerializer(self.todo_list)
@@ -59,7 +59,7 @@ class TodoItemSerializerTestCase(TestCase):
         serializer = TodoItemSerializer(self.todo_item)
         data = serializer.data
 
-        assert set(data.keys()) == set(['description', 'completed', 'created_at', 'updated_at'])
+        assert set(data.keys()) == set(['id', 'description', 'completed', 'created_at', 'updated_at'])
 
     def test_serializer_data(self):
         serializer = TodoItemSerializer(self.todo_item)
