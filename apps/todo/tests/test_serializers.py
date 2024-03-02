@@ -1,5 +1,4 @@
 from django.test import TestCase
-from django.utils import timezone
 
 from apps.todo.serializers import TodoItemSerializer, TodoListSerializer
 from apps.todo.models import TodoItem, TodoList
