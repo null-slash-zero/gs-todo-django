@@ -1,0 +1,39 @@
+{
+  "name": "gs-todo-django",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --config webpack.config.js --watch --mode development",
+    "build": "webpack --config webpack.config.js --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/null-slash-zero/gs-todo-django.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/null-slash-zero/gs-todo-django/issues"
+  },
+  "homepage": "https://github.com/null-slash-zero/gs-todo-django#readme",
+  "dependencies": {
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.3",
+    "@babel/preset-env": "^7.24.3",
+    "@babel/preset-react": "^7.24.1",
+    "babel-loader": "^9.1.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.10.0",
+    "install": "^0.13.0",
+    "npm": "^10.5.0",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.91.0",
+    "webpack-bundle-tracker": "^3.0.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
