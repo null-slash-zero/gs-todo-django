@@ -9,5 +9,6 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - POSTGRES_HOST_AUTH_METHOD=trust
+      - TZ=UTC
     ports:
       - 5432:5432

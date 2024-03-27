@@ -17,7 +17,7 @@ class TodoItem(TimeStampedModelMixin):
     """
     description = models.TextField()
     completed = models.BooleanField(default=False)
-    todo_list = models.ForeignKey(TodoList, on_delete=models.CASCADE)
+    todo_list = models.ForeignKey(TodoList, on_delete=models.CASCADE, related_name='items')
 
     def __str__(self):
         return self.description
