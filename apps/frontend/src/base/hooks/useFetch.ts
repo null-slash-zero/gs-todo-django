@@ -14,7 +14,7 @@ const useFetch = (
     setLoading(true);
     axios
       .get(url, { headers: { 'Content-Type': contentType } })
-      .then((data) => setData(data))
+      .then(({ data }) => setData(data))
       .catch((error) => setError(error))
       .finally(() => setLoading(false));
   }, []);
