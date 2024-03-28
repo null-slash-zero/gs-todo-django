@@ -11,10 +11,6 @@ module.exports = {
     publicPath: '/static/dist/',
     filename: '[name]-[contenthash].js',
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new BundleTracker({ path: __dirname, filename: 'webpack-stats.json' }),
-  ],
   module: {
     rules: [
       {
@@ -42,4 +38,8 @@ module.exports = {
       }),
     ],
   },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new BundleTracker({ path: __dirname, filename: 'webpack-stats.json' }),
+  ],
 };
