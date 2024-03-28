@@ -1,5 +1,7 @@
 import React from 'react';
+import { Container } from '@mui/material';
 
+import { TodoListItemComponent } from 'todos/components';
 import { TodoListType } from 'todos/types';
 
 type Props = {
@@ -8,14 +10,11 @@ type Props = {
 
 const TodoListCollection: React.FC<Props> = ({ todoLists = [] }) => {
   return (
-    <div>
+    <Container disableGutters>
       {todoLists.map((todoList: TodoListType) => (
-        <div key={todoList.id}>
-          <h3>{todoList.name}</h3>
-          <p>{todoList.description}</p>
-        </div>
+        <TodoListItemComponent key={todoList.id} todoList={todoList} />
       ))}
-    </div>
+    </Container>
   );
 };
 

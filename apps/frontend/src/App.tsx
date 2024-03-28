@@ -1,8 +1,14 @@
 import React from 'react';
-import TodoListContainer from 'todos/containers/TodoListCollectionContainer';
+import { Container } from '@mui/material';
+
+import { TodoListCollectionContainer } from 'todos/containers';
 
 const App = () => {
-  return <TodoListContainer />;
+  return (
+    <Container>
+      <TodoListCollectionContainer />
+    </Container>
+  );
 };
 
 export default App;
